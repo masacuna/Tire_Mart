@@ -1,5 +1,6 @@
 TireMart::Application.routes.draw do
 
+  get "aboutus/index"
   get "home/index"
   root 'home#index'
 
