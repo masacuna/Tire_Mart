@@ -1,4 +1,6 @@
 TireMart::Application.routes.draw do
+  get "products/index"
+  get "products/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
