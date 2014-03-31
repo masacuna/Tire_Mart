@@ -1,4 +1,6 @@
 TireMart::Application.routes.draw do
+  get "customers/index"
+  get "customers/show"
   get "provinces/index"
   get "provinces/show"
   get "products/index"
