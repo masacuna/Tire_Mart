@@ -1,4 +1,6 @@
 TireMart::Application.routes.draw do
+  get "provinces/index"
+  get "provinces/show"
   get "products/index"
   get "products/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
