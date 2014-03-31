@@ -1,3 +1,3 @@
-class LineItem < ActiveRecord::
-	belongs_to :order,:product
+class LineItem < ActiveRecord::Base
+	#belongs_to :order,:product
 end

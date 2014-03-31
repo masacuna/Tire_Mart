@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 20140331181514) do
 
   create_table "line_items", force: true do |t|
     t.integer  "quantity"
-    t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "product_id"
@@ -78,7 +77,6 @@ ActiveRecord::Schema.define(version: 20140331181514) do
     t.decimal  "gst_rate"
     t.decimal  "hst_rate"
     t.decimal  "price"
-    t.decimal  "total"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "customer_id"

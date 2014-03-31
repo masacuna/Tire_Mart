@@ -1,6 +1,7 @@
 TireMart::Application.routes.draw do
 
-  root 'products#index'
+  get "home/index"
+  root 'home#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
