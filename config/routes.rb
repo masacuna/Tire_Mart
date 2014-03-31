@@ -1,8 +1,6 @@
 TireMart::Application.routes.draw do
-
-  get "aboutus/index"
-  get "home/index"
   root 'home#index'
+  match ':controller(/:action(/:id))', :via => [:get, :post]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
