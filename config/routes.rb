@@ -1,7 +1,12 @@
 TireMart::Application.routes.draw do
-  root 'home#index'
-  match ':controller(/:action(/:id))', :via => [:get, :post]
+  
+  devise_for :users
+  #match ':controller(/:action(/:id))', :via => [:get, :post]
+  
 
+  get 'products', to: 'products#index', as: 'products'
+  
+  root 'home#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

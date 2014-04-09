@@ -1,2 +1,16 @@
 <h1>TireMart</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+ 
+  <% @products.each do |p| %>
+    
+      <p><%=  p.name %>
+        <br>
+        <%= p.price %>
+        <br>
+        <%= p.description %>
+        <br>
+        <%= p.stock_quantity %></p>
+    
+  <% end %>
+
