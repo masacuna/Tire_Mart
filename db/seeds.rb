@@ -20,16 +20,16 @@
 	Province.create(name: 'Saskatchewan', gst: 0.05, hst: 0, pst: 0.10)
 	Province.create(name: 'Yukon', gst: 0.05, hst: 0, pst: 0.00)
 
-	Customer.create(first_name: 'Bart', last_name: 'Sampson', address: '123 Main St', city: 'Springfield', email: 'bart@gmail.com', password: 'eatshorts', province_id: 1)
-	Customer.create(first_name: 'Steve', last_name: 'Snowdon', address: '124 Plain St', city: 'Winnipeg', email: 'steve@gmail.com', password: 'milk',province_id: 2)
+	User.create(first_name: 'Bart', last_name: 'Sampson', address: '123 Main St', city: 'Springfield', email: 'bart@gmail.com', password: 'eatshorts', province_id: 1)
+	User.create(first_name: 'Steve', last_name: 'Snowdon', address: '124 Plain St', city: 'Winnipeg', email: 'steve@gmail.com', password: 'milk',province_id: 2)
 
 
 	Product.create(name: 'Motomaster', price: 200, description: "Cdn Tire brand", stock_quantity: 20)
 	Product.create(name: 'Nokian', price: 300, description: "Nokian Hak", stock_quantity: 40)
 	Product.create(name: 'Cooper', price: 250, description: "Cooper Tire", stock_quantity: 60)
 
-	Order.create(status: 'shipped', pst_rate: 0.08, gst_rate: 0.05, hst_rate: 0, customer_id: 1, price: 800 )
-	Order.create(status: 'pending', pst_rate: 0.00, gst_rate: 0.05, hst_rate: 0, customer_id: 2, price: 1200 )
+	Order.create(status: 'shipped', pst_rate: 0.08, gst_rate: 0.05, hst_rate: 0, user_id: 1, price: 800 )
+	Order.create(status: 'pending', pst_rate: 0.00, gst_rate: 0.05, hst_rate: 0, user_id: 2, price: 1200 )
 
 	LineItem.create(quantity: 4, product_id: 1, order_id: 1)
 	LineItem.create(quantity: 4, product_id: 2, order_id: 2)

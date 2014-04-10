@@ -61,18 +61,6 @@ ActiveRecord::Schema.define(version: 20140409235707) do
     t.datetime "updated_at"
   end
 
-  create_table "customers", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "email"
-    t.string   "password"
-    t.integer  "province_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "line_items", force: true do |t|
     t.integer  "quantity"
     t.integer  "order_id"
@@ -87,7 +75,7 @@ ActiveRecord::Schema.define(version: 20140409235707) do
     t.decimal  "gst_rate"
     t.decimal  "hst_rate"
     t.decimal  "price"
-    t.integer  "customer_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -112,6 +100,11 @@ ActiveRecord::Schema.define(version: 20140409235707) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.integer  "province_id"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
